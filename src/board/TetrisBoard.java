@@ -75,33 +75,12 @@ public class TetrisBoard extends Observable
    */
   public enum StartingBlocks 
   {
-    /**
-     * O block.
-     */
     O(1, new OBlock(DEFAULT_MAX_X / 2, 0)),
-    /**
-     * L block.
-     */
     L(2, new LBlock(DEFAULT_MAX_X / 2, 0)), 
-    /**
-     * J Block.
-     */
     J(3, new JBlock(DEFAULT_MAX_X / 2, 0)),
-    /**
-     * S block.
-     */
     S(4, new SBlock(DEFAULT_MAX_X / 2, 0)), 
-    /**
-     * Z block.
-     */
     Z(5, new ZBlock(DEFAULT_MAX_X / 2, 0)), 
-    /**
-     * T block.
-     */
     T(6, new TBlock(DEFAULT_MAX_X / 2, 0)),
-    /**
-     * I block.
-     */
     I(7, new IBlock(DEFAULT_MAX_X / 2, 0));
     /**
      * The assigned number for a given blockType.
@@ -224,13 +203,7 @@ public class TetrisBoard extends Observable
    * A boolean array representing all spaces and inactive pieces on the board. 
    */
   private boolean[][] my_placed_pieces;
-  /**
-   * The width of the board.
-   */
   private int my_max_x;
-  /**
-   * The height of the board.
-   */
   private int my_max_y;
   /**
    * The current Great Old One used by this class.

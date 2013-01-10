@@ -12,19 +12,9 @@ import java.awt.Color;
  */
 public class Cthulhu extends AbstractGreatOldOne
 {
-  /**
-   * The difficulty mod for this character.
-   */
   private static final int DIFFICULTY_MOD = 3;
-  /**
-   * The current board in use.
-   */
   private final TetrisBoard my_board;
   
-  /**
-   * This is the constructor for the Cthulhu class.
-   * @param the_board The board currently in use.
-   */
   public Cthulhu(final TetrisBoard the_board)
   {
     super("Cthulhu", 

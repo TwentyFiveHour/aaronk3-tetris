@@ -26,37 +26,16 @@ public class KeyBindings
    */
   public enum CardinalActions
   {
-    /**
-     * Moves a piece down.
-     */
     DOWN,
-    /**
-     * Moves a piece right.
-     */
     RIGHT,
-    /**
-     * Moves a piece left.
-     */
     LEFT,
-    /**
-     * Rotates a piece.
-     */
     ROTATE,
-    /**
-     * Drops a piece.
-     */
     DROP,
-    /**
-     * Performs a power specific to the given great old one.
-     */
     POWER;
   }
     
     
   
-  /**
-   * Constructor for the KeyBindings class.
-   */
   public KeyBindings()
   {
     super();
@@ -64,9 +43,7 @@ public class KeyBindings
     my_strings = new HashMap<CardinalActions, String>();
     setDefaultKeys();
   }
-  /**
-   * Sets keys to their default keyboard characters.
-   */
+  
   public final void setDefaultKeys()
   {
     my_chars.put(CardinalActions.DOWN, 's');

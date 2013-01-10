@@ -26,42 +26,15 @@ import javax.swing.JTextArea;
 @SuppressWarnings("serial")
 public class TetrisMenuBar extends JMenuBar
 {
-  /**
-   * The dimension of the help dialog box.
-   */
   private static final int  HELP_BOX_DIMENSION = 500;
-  /**
-   * The help menu item.
-   */
   private final JMenuItem my_help;
-  /**
-   * The pause menu item.
-   */
   private final JMenuItem my_pause;
-  /**
-   * The file menu.
-   */
   private final  JMenu my_file;
-  /**
-   * The new game menu item.
-   */
   private final JMenuItem my_new_game;
-  /**
-   * The current board in use.
-   */
   private final TetrisBoard my_board;
-  /**
-   * The "end game" menu item.
-   */
   private final JMenuItem my_end_game;
-  /**
-   * The menu governing Great Old One selection.
-   */
   private final GreatOldOneMenu my_old_ones;
-  /**
-   * Constructor for this class.
-   * @param the_board The Tetris Board in use.
-   */
+  
   public TetrisMenuBar(final TetrisBoard the_board)
   {
     super();
@@ -75,9 +48,7 @@ public class TetrisMenuBar extends JMenuBar
     
     setMenuOptions();
   }
-  /**
-   * Sets the options for the various menus.
-   */
+  
   private void setMenuOptions()
   {
     my_old_ones.createOldOneButton(new DefaultCharacter(my_board));
@@ -98,11 +69,7 @@ public class TetrisMenuBar extends JMenuBar
     my_help.addActionListener(new HelpListener());
     add(my_file);
   }
-  /**
-   * ActionListener for the pause button.
-   * @author Aaron Kaufman
-   *@version 3 9 2012
-   */
+  
   public class PauseListener implements ActionListener
   {
     
@@ -120,11 +87,7 @@ public class TetrisMenuBar extends JMenuBar
     }
     
   }
-  /**
-   * Listener for the "New Game" button.
-   * @author Aaron Kaufman
-   *@version 3 9 2012
-   */
+  
   public class NewGameListener implements ActionListener
   {
     @Override
@@ -133,11 +96,7 @@ public class TetrisMenuBar extends JMenuBar
       my_board.startNewGame();
     }
   }
-  /**
-   * Listener for the "end game" button.
-   * @author Aaron Kaufman
-   *@version 3 9 2012
-   */
+  
   public class EndGameListener implements ActionListener
   {
 
@@ -149,11 +108,7 @@ public class TetrisMenuBar extends JMenuBar
     }
     
   }
-  /**
-   * ActionListener for the help menu button.
-   * @author Aaron Kaufman
-   *@version 3 9 2012
-   */
+  
   public class HelpListener implements ActionListener
   {
 

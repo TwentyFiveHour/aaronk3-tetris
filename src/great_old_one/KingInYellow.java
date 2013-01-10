@@ -14,15 +14,7 @@ import board.TetrisBoard;
  */
 public class KingInYellow extends AbstractGreatOldOne
 {
-  /**
-   * The board being manipulated.
-   */
   private final TetrisBoard my_board;
-  
-  /**
-   * The constructor for this class.
-   * @param the_board The tetris board being manipulated.
-   */
   public KingInYellow(final TetrisBoard the_board)
   {
     super("The King in Yellow", "Dark Designs:\nReplace the next block with an I block.",

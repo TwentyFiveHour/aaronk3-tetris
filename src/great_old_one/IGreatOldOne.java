@@ -23,28 +23,12 @@ public interface IGreatOldOne
    * @return
    */
   public int getDifficultyModifier();
-  /**
-   * Returns this GOO's name.
-   * @return this GOO's name.
-   */
   public String getName();
-  /**
-   * Returns the name of this GOO's power.
-   * @return the name of this GOO's power.
-   */
   public String getPowerName();
-  /**
-   * Returns the icon representing this GOO.
-   * @return the icon representing this GOO.
-   */
   public ImageIcon getIcon();
-  /**
-   * Returns the color representing this GOO.
-   * @return the color representing this GOO.
-   */
   public Color getColor();
   /**
-   * Changes the board in some way defined by the subclass.
+   * Changes the board in some way defined by the implementing subclass.
    */
   public abstract void doPower();
   

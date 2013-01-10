@@ -121,11 +121,6 @@ public class BoardTest
 
       }
     }
-    /*
-    System.out.println("My two line" + my_two_line_populated);
-    System.out.println("My three line" + my_three_line_populated);
-    System.out.println("My four line" + my_four_line_populated);
-    */
     
   }
 

@@ -28,30 +28,11 @@ import javax.swing.JTextArea;
 public class GreatOldOnePanel extends JPanel implements Observer
 {
 
-  /**
-   * The font size for this panel.
-   */
   private static final int FONT_SIZE = 20;
-  /**
-   * The size of the icons for the Great Old One.
-   * 
-   */
   private static final int ICON_SIZE = 100;
-  /**
-   * The preferred width of this panel.
-   */
   private static final int PREFERRED_WIDTH = 200;
-  /**
-   * The preferred height for this panel.
-   */
   private static final int PREFERRED_HEIGHT = 400;
-  /**
-   * The amount of margin from the left border given to text.
-   */
   private static final int LEFT_JUSTIFY = 10;
-  /**
-   * The portrait panel.
-   */
   private final JPanel my_portrait_panel;
   /**
    * The panel describing the Great Old One's power and difficulty modifier.
@@ -61,16 +42,7 @@ public class GreatOldOnePanel extends JPanel implements Observer
    * The list of sub-panels making up this panel.
    */
   private final List<JPanel> my_panel_list;
-  /**
-   * The default font for this panel.
-   */
   private final Font my_font;
-  
-  /**
-   * The GreatOldOneData this panel draws from.
-   */
-  
-
   private GreatOldOneData my_great_old_one_data;
   /**
    * Panel giving all Great Old One data for this game.
@@ -97,19 +69,17 @@ public class GreatOldOnePanel extends JPanel implements Observer
   {
     setPreferredSize(new Dimension(PREFERRED_WIDTH, PREFERRED_HEIGHT));
     
-    //my_panel_list.add(my_dummy_panel);
+    
     my_panel_list.add(my_portrait_panel);
     
     for (JPanel p : my_panel_list)
     {
       add(p);
-      //p.setOpaque(false);
       p.setBackground(Color.BLACK);
     }
     add(my_description_panel);
     setOpaque(false);
     setBackground(Color.BLACK);
-    //my_dummy_panel.setPreferredSize(new Dimension(PREFERRED_WIDTH, START_HEIGHT));
     setPreferredSize(new Dimension(PREFERRED_WIDTH, PREFERRED_HEIGHT));
   }
   
@@ -122,9 +92,6 @@ public class GreatOldOnePanel extends JPanel implements Observer
     if (the_data instanceof GreatOldOneData)
     {
       my_great_old_one_data = (GreatOldOneData) the_data;
-      
-      
-      
       my_portrait_panel.repaint();
       my_description_panel.initialize();
     }
@@ -136,14 +103,8 @@ public class GreatOldOnePanel extends JPanel implements Observer
    */
   private class PortraitPanel extends JPanel
   {
-    /**
-     * The height of this panel.
-     */
     private static final int HEIGHT = 200;
     
-    /**
-     * Constructor for this class.
-     */
     public PortraitPanel()
     {
       super();
@@ -190,13 +151,7 @@ public class GreatOldOnePanel extends JPanel implements Observer
    */
   private class DescriptionPanel extends JTextArea
   {
-    /**
-     * The height of this panel.
-     */
     private static final int HEIGHT = 300;
-    /**
-     * The constructor for this class.
-     */
     public DescriptionPanel()
     {
       super();
@@ -222,32 +177,6 @@ public class GreatOldOnePanel extends JPanel implements Observer
       setPreferredSize(new Dimension(PREFERRED_WIDTH, HEIGHT));
     }
     
-    /*
-    public void paintComponent(final Graphics the_graphics)
-    {
-      super.paintComponent(the_graphics);
-      Graphics2D g2d = (Graphics2D) the_graphics;
-      int current_line = my_font_size*2;
-      g2d.setColor(Color.WHITE);
-      
-      Font big_font = new Font("Helvetica", Font.BOLD, my_font_size * 2);
-      g2d.setFont(big_font);
-      g2d.setColor(my_character.getColor());
-      g2d.drawString("Power:", 
-                     LEFT_JUSTIFY,
-                     current_line);
-      
-      current_line += my_font_size * 2;
-      
-      g2d.setFont(new Font("Helvetica", Font.BOLD, my_font_size / 2));
-      g2d.drawString(my_character.getPowerName(), 
-                     LEFT_JUSTIFY,
-                     current_line);
-      
-      
-      
-    }
-    */
     
   }
 

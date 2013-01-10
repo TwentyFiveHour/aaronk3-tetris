@@ -30,35 +30,12 @@ import javax.swing.JPanel;
 @SuppressWarnings("serial")
 public class DataDisplayPanel extends JPanel implements Observer
 {
-   /**
-   * The default width of any given panel.
-   */
   private static final int DEFAULT_WIDTH = 150;
-  /**
-   * The default height of any given panel.
-   */
   private static final int DEFAULT_HEIGHT = 500;
-  /**
-   * The default font size for any given panel.
-   */
   private static final int DEFAULT_FONT_SIZE = 24;
-
-  /**
-   * The space given between each panel.
-   */
   private static final int SPACER = 5;
-  /**
-   * The character the player is currently using.
-   */
   private int my_total_height;
-  
-  /**
-   * The font used by this object.
-   */
   private final Font my_font;
-  /**
-   * The TetrisData used by this object.
-   */
   private TetrisData my_data;
   /**
    * The panel responsible for painting the next piece on the board.
@@ -81,11 +58,6 @@ public class DataDisplayPanel extends JPanel implements Observer
    */
   private final ScoreDifficultyPanel my_score_panel;
   
-  /**
-   * The constructor for this class.
-   * @param the_data The TetrisData that the board gets information from.
-   * @param the_keys The KeyBindings object used by this board.
-   */
   public DataDisplayPanel(final TetrisData the_data, final KeyBindings the_keys)
   {
     super();
@@ -104,10 +76,6 @@ public class DataDisplayPanel extends JPanel implements Observer
      
     initializePanels();
   }
-  /**
-   * Returns the width of the DataDisplayPanel.
-   * @return the width of the DataDisplayPanel.
-   */
   public int getDefaultWidth()
   {
     return DEFAULT_WIDTH;
@@ -141,12 +109,6 @@ public class DataDisplayPanel extends JPanel implements Observer
     }
 
     
-    
-    /*
-    my_piece_painter.setPreferredSize(new Dimension(DEFAULT_WIDTH / 2, DEFAULT_HEIGHT/2));
-    my_string_panel.setPreferredSize(new Dimension(DEFAULT_WIDTH / 2, DEFAULT_HEIGHT/2));
-    my_keys_painter.setPreferredSize(new Dimension(DEFAULT_WIDTH, DEFAULT_HEIGHT));
-    */
   }
   @Override
   public void update(final Observable the_board, final Object the_data)
@@ -176,13 +138,7 @@ public class DataDisplayPanel extends JPanel implements Observer
    */
   public class KeysPainter extends JPanel
   {
-    /**
-     * The number of commands to be painted.
-     */
     private static final int NUM_COMMANDS = 5;
-    /**
-     * Constructor for this class.
-     */
     public KeysPainter()
     {
       super();
@@ -254,16 +210,10 @@ public class DataDisplayPanel extends JPanel implements Observer
    */
   public class NextPiecePainter extends JPanel
   {
-    /**
-     * The default block size.
-     */
     private static final int DEFAULT_BLOCK_SIZE = 20;
-    /**
-     * The maximum number of blocks along any one dimension.
-     */
     private static final int MAX_BLOCK_DIMENSION = 4;
     /**
-     * The next block given as a boolean.
+     * The next block given as a 2D boolean array.
      */
     private boolean[][] my_next;
     /**

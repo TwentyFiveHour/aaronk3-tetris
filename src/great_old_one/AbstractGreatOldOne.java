@@ -120,27 +120,13 @@ public abstract class AbstractGreatOldOne implements IGreatOldOne
     {
       e.printStackTrace();
     }
-
-    
- 
-    //final Image img = img_icon.getImage();
-    //g2.drawImage(img, mover.x() * SQUARE_SIZE, mover.y() * SQUARE_SIZE, SQUARE_SIZE,
-    //             SQUARE_SIZE, this);
-   
     return img_icon;
   }
   
-  /**
-   * Returns the color representing this GOO.
-   * @return the color representing this GOO.
-   */
   public Color getColor()
   {
     return my_color;
   }
-  /**
-   * Changes the board in some way defined by the subclass.
-   */
   public abstract void doPower();
   
   /**
@@ -175,11 +161,6 @@ public abstract class AbstractGreatOldOne implements IGreatOldOne
       my_power_timer--;
     }
   }
-  /**
-   * 
-   * Returns the tetris board currently used by this character.
-   * @return The tetris board currently used.
-   */
   public TetrisBoard getBoard()
   {
     return my_board;

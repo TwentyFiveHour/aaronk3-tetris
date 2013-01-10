@@ -11,14 +11,7 @@ import java.awt.Color;
  */
 public class YogSothoth extends AbstractGreatOldOne
 {
-  /**
-   * The tetris board being manipulated.
-   */
   private final TetrisBoard my_board;
-  /**
-   * The constructor for this class.
-   * @param the_board The tetris board being manipulated.
-   */
   public YogSothoth(final TetrisBoard the_board)
   {
     super("Yog'Sothoth", "Terrible Knowledge:\nfills half of both left and right" +

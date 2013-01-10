@@ -17,10 +17,6 @@ public class DefaultCharacter extends AbstractGreatOldOne
    */
   private static final String POWER_DESC = "Herbert West is a puny human. He has no powers.";
   
-  /**
-   * Constructor for the DefaultCharacter class.
-   * @param the_board The current tetris board.
-   */
   public DefaultCharacter(final TetrisBoard the_board)
   {
     super("Herbert West", POWER_DESC, "herbert_west.jpg",
